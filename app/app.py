@@ -144,5 +144,8 @@ def handle_zoom(*args):
     
     return [""] * 3 + [None]
 
+
+server = app.server
+
 if __name__ == '__main__':
     app.run_server(debug=True)
