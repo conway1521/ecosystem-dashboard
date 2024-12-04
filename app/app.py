@@ -93,9 +93,9 @@ def create_pillar_box(pillar_id, data, position_class):
                         ),
                         id=f'{pillar_id}-{i}-subject-collapse',
                     )
-                ] for i, subject in enumerate(data)
+                ] for i, subject in enumerate(data)  # <- This loop wraps the entire dbc.Card content
             ),
-            id=f"{pillar_id}-card",
+            id=f"{pillar_id}-card",  # <- Properly aligned within the html.Div
             className=f"pillar-container {position_class}"
         ],
         id=f"{pillar_id}-container",
