@@ -203,26 +203,28 @@ def create_pillar_box(pillar_id, data, position_class):
             create_zoom_controls(pillar_id),
             dbc.Card(
                 [
-                    dbc.CardHeader(
-                        dbc.Button(
-                            subject['title'],
-                            id=f'{pillar_id}-{i}-subject-toggle',
-                            color='link',
-                            className='text-left w-100'
-                        )
-                    ),
-                    dbc.Collapse(
-                        dbc.CardBody(
-                            [
-                                html.Div([
-                                    html.H6(component['title']),
-                                    html.Ul([
-                                        html.Li(var) for var in component['variables']
-                                    ])
-                                ]) for component in subject['components']
-                            ]
+                    (
+                        dbc.CardHeader(
+                            dbc.Button(
+                                subject['title'],
+                                id=f'{pillar_id}-{i}-subject-toggle',
+                                color='link',
+                                className='text-left w-100'
+                            )
                         ),
-                        id=f'{pillar_id}-{i}-subject-collapse',
+                        dbc.Collapse(
+                            dbc.CardBody(
+                                [
+                                    html.Div([
+                                        html.H6(component['title']),
+                                        html.Ul([
+                                            html.Li(var) for var in component['variables']
+                                        ])
+                                    ]) for component in subject['components']
+                                ]
+                            ),
+                            id=f'{pillar_id}-{i}-subject-collapse',
+                        )
                     )
                     for i, subject in enumerate(data)
                 ]
