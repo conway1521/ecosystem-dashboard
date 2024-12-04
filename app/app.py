@@ -72,8 +72,26 @@ def create_pillar_box(pillar_id, data, position_class):
             create_zoom_controls(pillar_id),
             dbc.Card(
                 [
-                    # Previous pillar box content
-                    # [Same as before]
+                     dbc.CardHeader(
+                        dbc.Button(
+                            subject['title'],
+                            id=f'{pillar_id}-{i}-subject-toggle',
+                            color='link',
+                            className='text-left w-100'
+                        )
+                    ),
+                    dbc.Collapse(
+                        dbc.CardBody(
+                            [
+                                html.H6(component['title']),
+                                html.Ul([
+                                    html.Li(var) for var in component['variables']
+                                ])
+                                for component in subject['components']
+                            ]
+                        ),
+                        id=f'{pillar_id}-{i}-subject-collapse',
+                    )
                 ],
                 id=f"{pillar_id}-card",
                 className=f"pillar-container {position_class}"
@@ -83,8 +101,29 @@ def create_pillar_box(pillar_id, data, position_class):
     )
 
 app.layout = html.Div([
-    # Navigation bar [Same as before]
+    # Navigation bar
+    dbc.Navbar(
+        dbc.Container(
+            [
+                html.A(
+                    dbc.Row(
+                        [
+                            dbc.Col(html.H3("Regional Economic Development Ecosystem")),
+                        ],
+                        align="center",
+                        className="g-0",
+                    ),
+                    href="/",
+                    style={"textDecoration": "none"},
+                )
+            ]
+        ),
+        color="dark",
+        dark=True,
+        className="mb-4",
+    ),
     
+    # Main content
     dbc.Container([
         html.Div([
             html.Div(
