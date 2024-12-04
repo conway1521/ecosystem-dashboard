@@ -72,7 +72,7 @@ def create_pillar_box(pillar_id, data, position_class):
             create_zoom_controls(pillar_id),
             dbc.Card(
                 [
-                     dbc.CardHeader(
+                    dbc.CardHeader(
                         dbc.Button(
                             subject['title'],
                             id=f'{pillar_id}-{i}-subject-toggle',
@@ -83,19 +83,20 @@ def create_pillar_box(pillar_id, data, position_class):
                     dbc.Collapse(
                         dbc.CardBody(
                             [
-                                html.H6(component['title']),
-                                html.Ul([
-                                    html.Li(var) for var in component['variables']
-                                ])
-                                for component in subject['components']
+                                html.Div([
+                                    html.H6(component['title']),
+                                    html.Ul([
+                                        html.Li(var) for var in component['variables']
+                                    ])
+                                ]) for component in subject['components']
                             ]
                         ),
                         id=f'{pillar_id}-{i}-subject-collapse',
                     )
-                ],
-                id=f"{pillar_id}-card",
-                className=f"pillar-container {position_class}"
-            )
+                ] for i, subject in enumerate(data)
+            ),
+            id=f"{pillar_id}-card",
+            className=f"pillar-container {position_class}"
         ],
         id=f"{pillar_id}-container",
     )
