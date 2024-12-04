@@ -226,10 +226,9 @@ def create_pillar_box(pillar_id, data, position_class):
                     )
                 ] for i, subject in enumerate(data)
             ),
-            id="{}-card".format(pillar_id),
-            className=f"pillar-container {position_class}"
         ],
         id=f"{pillar_id}-container",
+        className=f"pillar-container {position_class}"
     )
 
 app.layout = html.Div([
