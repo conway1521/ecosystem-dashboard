@@ -5,6 +5,137 @@ import dash_bootstrap_components as dbc
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+# Define the pillars_data
+pillars_data = {
+    "pbc": {
+        "title": "Place-based Conditions",
+        "subjects": [
+            {
+                "title": "Basic Needs",
+                "components": [
+                    {
+                        "title": "Environmental Quality",
+                        "variables": ["Air quality", "Water quality", "Pollution exposure"]
+                    },
+                    {
+                        "title": "Living Conditions",
+                        "variables": ["Housing availability", "Housing affordability", "Neighborhood quality"]
+                    },
+                    {
+                        "title": "Core Mobility",
+                        "variables": ["Public transport coverage", "Road network quality", "Transport affordability"]
+                    }
+                ]
+            },
+            {
+                "title": "Access",
+                "components": [
+                    {
+                        "title": "Essential Services",
+                        "variables": ["Healthcare access", "Education access", "Financial services"]
+                    },
+                    {
+                        "title": "Digital Infrastructure",
+                        "variables": ["Broadband coverage", "Digital service access", "Network quality"]
+                    },
+                    {
+                        "title": "Institutional Infrastructure",
+                        "variables": ["Policy implementation", "Administrative effectiveness", "Development support"]
+                    }
+                ]
+            }
+        ]
+    },
+    "hsc": {
+        "title": "Human & Social Capital",
+        "subjects": [
+            {
+                "title": "Human Capital Development",
+                "components": [
+                    {
+                        "title": "Educational Foundation",
+                        "variables": ["Educational attainment", "Early development", "Skills acquisition"]
+                    },
+                    {
+                        "title": "Development Pathways",
+                        "variables": ["Transition effectiveness", "Opportunity access", "Career progression"]
+                    }
+                ]
+            },
+            {
+                "title": "Network Capital",
+                "components": [
+                    {
+                        "title": "Network Structure",
+                        "variables": ["Within-sector connectivity", "Cross-sector mobility"]
+                    },
+                    {
+                        "title": "Network Effectiveness",
+                        "variables": ["Job search outcomes", "Resource access", "Knowledge diffusion"]
+                    }
+                ]
+            },
+            {
+                "title": "Social Engagement",
+                "components": [
+                    {
+                        "title": "Institutional Engagement",
+                        "variables": ["Behavioral trust", "Participation patterns"]
+                    },
+                    {
+                        "title": "Social Cohesion",
+                        "variables": ["Support networks", "Community belonging", "Social trust"]
+                    }
+                ]
+            }
+        ]
+    },
+    "ea": {
+        "title": "Economic Activity",
+        "subjects": [
+            {
+                "title": "Growth & Prosperity",
+                "components": [
+                    {
+                        "title": "Economic Base",
+                        "variables": ["GDP size", "Growth trends", "Living standards"]
+                    },
+                    {
+                        "title": "Productive Efficiency",
+                        "variables": ["Labor productivity", "Capital utilization", "Resource efficiency"]
+                    }
+                ]
+            },
+            {
+                "title": "Labour Market",
+                "components": [
+                    {
+                        "title": "Employment Structure",
+                        "variables": ["Employment levels", "Labor market slack", "Job quality"]
+                    },
+                    {
+                        "title": "Market Dynamics",
+                        "variables": ["Job-match efficiency", "Market activity", "Career progression"]
+                    }
+                ]
+            },
+            {
+                "title": "Household Resources",
+                "components": [
+                    {
+                        "title": "Income Security",
+                        "variables": ["Income levels", "Economic vulnerability", "Financial stability"]
+                    },
+                    {
+                        "title": "Wealth Structure",
+                        "variables": ["Asset base", "Financial inclusion", "Wealth mobility"]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
 # Add custom CSS for transitions
 app.index_string = '''
 <!DOCTYPE html>
@@ -93,9 +224,9 @@ def create_pillar_box(pillar_id, data, position_class):
                         ),
                         id=f'{pillar_id}-{i}-subject-collapse',
                     )
-                ] for i, subject in enumerate(data)  # <- This loop wraps the entire dbc.Card content
+                ] for i, subject in enumerate(data)
             ),
-            id=f"{pillar_id}-card",  # <- Properly aligned within the html.Div
+            id=f"{pillar_id}-card",
             className=f"pillar-container {position_class}"
         ],
         id=f"{pillar_id}-container",
@@ -183,7 +314,6 @@ def handle_zoom(*args):
         return classes + [pillar_id]
     
     return [""] * 3 + [None]
-
 
 server = app.server
 
