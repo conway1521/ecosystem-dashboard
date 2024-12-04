@@ -224,7 +224,8 @@ def create_pillar_box(pillar_id, data, position_class):
                         ),
                         id=f'{pillar_id}-{i}-subject-collapse',
                     )
-                ] for i, subject in enumerate(data)
+                    for i, subject in enumerate(data)
+                ]
             ),
         ],
         id=f"{pillar_id}-container",
