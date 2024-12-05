@@ -1,0 +1,34 @@
+Subject,Component,Variables,Optimal NUTS Level,Data Source,Notes
+Basic Needs,,,,, 
+Environmental Quality,Air Quality,"PM2.5, NO2 levels",NUTS 3,European Environmental Agency (EEA),High spatial granularity through monitoring stations
+,Water Quality,Water quality compliance,NUTS 3,EEA Water Quality Database,Local measurement points
+,Environmental Risk,Natural hazard exposure,NUTS 3,"EEA, Corine Land Cover",Can be constructed from multiple indicators
+,Basic Infrastructure,Water/power supply reliability,NUTS 3,Urban Data Platform Plus,Coverage may vary by region
+Living Conditions,Housing,Housing availability,NUTS 3,Eurostat Regional Database,Good coverage at NUTS 3
+,,Housing affordability ratio,NUTS 3,Eurostat Regional Database,Price to income ratios
+,,Housing quality standards,NUTS 2,EU-SILC,Limited NUTS 3 availability
+,Neighborhood,Basic amenity coverage,NUTS 3,Urban Data Platform Plus,Urban areas better covered
+,,Public space access,NUTS 3,Corine Land Cover,Can use green space as proxy
+,,Safety metrics,NUTS 3,Eurostat Crime Statistics,Some gaps in Eastern Europe
+Core Mobility,Transport,Public transport coverage,NUTS 3,Urban Data Platform Plus,Better for urban areas
+,,Road network quality,NUTS 3,Eurostat Regional Database,Good coverage
+,,Transport affordability,NUTS 2,EU-SILC,Limited NUTS 3 availability
+Access,,,,,
+Essential Services,Healthcare,Hospital bed density,NUTS 3,Eurostat Regional Database,Comprehensive coverage
+,,Emergency service coverage,NUTS 3,JRC Healthcare Services,Distance-based metrics
+,,Healthcare facility density,NUTS 3,Eurostat Regional Database,Good spatial coverage
+,Education,School facility density,NUTS 3,JRC Education Services,Comprehensive coverage
+,,Higher education access,NUTS 2/3,ETER Database,Institution locations
+,,Training center coverage,NUTS 2,Regional Innovation Scoreboard,Limited NUTS 3 data
+,Financial,Bank branch density,NUTS 3,ECB Statistical Data Warehouse,Good coverage
+,,ATM availability,NUTS 3,ECB Statistical Data Warehouse,Urban bias in coverage
+,,Payment system coverage,NUTS 2,ECB Statistical Data Warehouse,National level often only
+Digital Infrastructure,Connectivity,Broadband coverage,NUTS 2,DESI,Limited NUTS 3 availability
+,,Mobile network access,NUTS 2,DESI,National level often only
+,,Digital infrastructure quality,NUTS 2,DESI,Limited local variation
+Institutional Infrastructure,Implementation,Cohesion fund absorption,NUTS 2,DG REGIO,Policy implementation level
+,,Administrative efficiency,NUTS 2,EU Quality of Government Index,Regional governance measure
+,,Cross-institutional cooperation,NUTS 2,EU Quality of Government Index,No NUTS 3 equivalent
+,Knowledge,Research institution density,NUTS 2,ESFRI,Institution locations
+,,Innovation support structure,NUTS 2,Regional Innovation Scoreboard,Policy implementation level
+,,Industry-institution linkages,NUTS 2,Regional Innovation Scoreboard,Network measures

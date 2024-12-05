@@ -1,0 +1,33 @@
+| Subject                    | Component           | Variables                      | Optimal NUTS Level | Data Source                        | Notes                                               |
+|---------------------------|---------------------|--------------------------------|-------------------|------------------------------------|----------------------------------------------------|
+| **Human Capital Development** |                 |                                |                   |                                    |                                                    |
+| Educational Foundation    | Basic Attainment    | Secondary completion rates     | NUTS 2            | Eurostat Regional Database         | Good coverage across EU regions                     |
+|                          |                     | Tertiary education rates       | NUTS 2            | Eurostat Regional Database         | Consistent measurement methodology                  |
+|                          |                     | Mean years of schooling        | NUTS 2            | EU-LFS                             | Can be calculated from detailed data               |
+|                          | Early Development   | Early education participation  | NUTS 2            | Eurostat Regional Database         | Coverage varies by country                         |
+|                          |                     | Basic skills attainment        | NUTS 2/1          | PISA Regional Database             | Limited regional coverage                          |
+|                          |                     | Educational quality metrics    | NUTS 2            | Eurostat Education Database        | Based on standardized indicators                   |
+| Skills Development       | Ongoing Learning    | Vocational training rates      | NUTS 2            | CEDEFOP                            | Good coverage but temporal gaps                    |
+|                          |                     | Adult learning participation   | NUTS 2            | EU-LFS                             | Annual data available                              |
+|                          |                     | Digital skills attainment      | NUTS 1/2          | DESI Regional                      | Limited regional granularity                       |
+|                          | Opportunity Paths   | Training-to-employment rates   | NUTS 2            | EU-LFS                             | Can be constructed from transitions data           |
+|                          |                     | NEET rates                     | NUTS 2            | Eurostat Regional Database         | Consistent measurement across regions              |
+|                          |                     | Skill mismatch indicators      | NUTS 2            | CEDEFOP Skills Panorama            | Available for most regions                         |
+| **Network Capital**       |                     |                                |                   |                                    |                                                    |
+| Within-sector Networks   | Professional Density | Sector-specific densities     | NUTS 2            | EU-LFS                             | Can be constructed from sector data                |
+|                          |                     | Occupation networks            | NUTS 2            | EU-LFS                             | Based on detailed occupation codes                 |
+|                          |                     | Industry specialization        | NUTS 2            | Regional Innovation Survey         | Available for subset of regions                    |
+| Cross-sector Networks    | Mobility Patterns    | Inter-sector job transitions   | NUTS 2            | EU-LFS longitudinal                | Tracks movements between sectors                   |
+|                          |                     | Cross-industry collaboration    | NUTS 2            | Regional Innovation Survey         | Available for subset of regions                    |
+| Network Effectiveness    | Job Search Outcomes  | Search method success         | NUTS 2            | EU-LFS ad hoc modules              | Available in specific years                        |
+|                          |                     | Time to employment             | NUTS 2            | EU-SILC                            | Can be constructed from transitions                |
+|                          | Resource Access      | Professional membership        | NUTS 2            | European Social Survey             | Regular measurement                                |
+|                          |                     | Inter-firm mobility            | NUTS 2            | EU-LFS                             | Derived from employment histories                  |
+| **Social Engagement**     |                     |                                |                   |                                    |                                                    |
+| Institutional Engagement | Behavioral Trust     | Institutional participation    | NUTS 2            | European Social Survey             | Measures actual engagement behavior                |
+|                          |                     | Public service utilization     | NUTS 2            | EU-SILC                            | Tracks actual service usage                        |
+| Social Trust            | Community Relations   | Perceived institutional support| NUTS 2            | European Quality of Life Survey    | Regular measurement                                |
+|                          |                     | Community-institution bridges   | NUTS 2            | European Social Survey             | Focuses on social aspects                          |
+| Social Cohesion         | Support Networks     | Network availability           | NUTS 2            | European Quality of Life Survey    | Comprehensive coverage                             |
+|                          |                     | Community belonging            | NUTS 2            | European Social Survey             | Regular measurement                                |
+|                          |                     | Social trust indicators        | NUTS 2            | European Social Survey             | Core module question                               |
